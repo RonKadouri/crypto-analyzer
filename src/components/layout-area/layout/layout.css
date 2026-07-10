@@ -1,0 +1,29 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Layout > nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #1e293b;
+    color: white;
+}
+
+.Layout > main {
+    flex: 1;
+    padding: 20px;
+    background-color: #fcf3de;
+}
+
+.Layout > footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e293b;
+    color: white;
+}
