@@ -1,3 +1,57 @@
 .Menu {
-	
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.Menu .MuiBreadcrumbs-ol a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.Menu .MuiBreadcrumbs-ol a:hover {
+    color: #ffffff;
+}
+
+.Menu .MuiBreadcrumbs-ol a.active {
+    color: #e6a817;
+    font-weight: 700;
+}
+
+.Menu .MuiBreadcrumbs-separator {
+    color: #64748b;
+}
+
+.Menu .SearchField {
+    width: 260px;
+    max-width: 40vw;
+}
+
+.Menu .SearchField .MuiOutlinedInput-root {
+    background-color: #ffffff;
+    border-radius: 22px;
+    padding-left: 14px;
+    color: #2b2b2b;
+    transition: box-shadow 0.2s ease;
+}
+
+.Menu .SearchField .MuiOutlinedInput-root.Mui-focused {
+    box-shadow: 0 0 0 3px rgba(230, 168, 23, 0.35);
+}
+
+.Menu .SearchField .MuiOutlinedInput-notchedOutline {
+    border: none;
+}
+
+.Menu .SearchField .MuiInputAdornment-root {
+    color: #9b7b5a;
+}
+
+.Menu .SearchField input {
+    padding: 8px 14px 8px 6px;
+    font-size: 14px;
 }

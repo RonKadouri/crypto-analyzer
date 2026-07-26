@@ -1,7 +1,11 @@
 import { Avatar, Button, Switch, Typography } from "@mui/material";
-import React from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { CoinModel } from "../../../models/coin-model";
+import { AppState } from "../../../redux/app-state";
+import { selectedCoinsSlice, maxSelectedCoins } from "../../../redux/selected-coins-slice";
 import { CoinDialogBox } from "../coin-dialog-box/coin-dialog-box";
+import { MaxCoinsDialog } from "../max-coins-dialog/max-coins-dialog";
 import "./coins-card.css";
 
 type CoinCardProps = {
@@ -10,7 +14,21 @@ type CoinCardProps = {
 
 export function CoinsCard(props: CoinCardProps) {
 
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [openMax, setOpenMax] = useState(false);
+
+    const dispatch = useDispatch();
+    const selectedCoins = useSelector((state: AppState) => state.selectedCoins);
+    const isSelected = selectedCoins.includes(props.coin.id);
+
+    const handleToggle = () => {
+        // Trying to add a new coin while already at the limit -> show the limit dialog.
+        if (!isSelected && selectedCoins.length >= maxSelectedCoins) {
+            setOpenMax(true);
+            return;
+        }
+        dispatch(selectedCoinsSlice.actions.toggleCoin(props.coin.id));
+    };
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -35,7 +53,11 @@ export function CoinsCard(props: CoinCardProps) {
                         {props.coin.name}
                     </Typography>
                 </div>
-                <Switch slotProps={{ input: { "aria-label": "Select " + props.coin.name } }} />
+                <Switch
+                    checked={isSelected}
+                    onChange={handleToggle}
+                    slotProps={{ input: { "aria-label": "Select " + props.coin.name } }}
+                />
             </div>
 
             <Button fullWidth variant="contained" disableElevation onClick={handleClickOpen}>
@@ -44,9 +66,7 @@ export function CoinsCard(props: CoinCardProps) {
 
             <CoinDialogBox coin={props.coin} open={open} onClose={handleClose} />
 
-
-
-
+            <MaxCoinsDialog open={openMax} onClose={() => setOpenMax(false)} />
         </div>
     );
 }

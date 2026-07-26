@@ -1,0 +1,87 @@
+.Recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Recommendations .RecommendationsHeader {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0d9a3;
+}
+
+.Recommendations .RecommendationsTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.Recommendations .RecommendationsSubtitle {
+    font-size: 13px;
+    color: #9b7b5a;
+}
+
+.Recommendations .RecommendationsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Empty state — centered card matching the CoinsCard look. */
+.Recommendations .RecommendationsEmpty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 420px;
+    margin: 48px auto 0;
+    padding: 36px 32px;
+    text-align: center;
+    background-color: #fffdf6;
+    border: 1px solid #f0d9a3;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(190, 150, 60, 0.12);
+}
+
+.Recommendations .RecommendationsEmptyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 4px;
+    color: #e6a817;
+    background-color: rgba(230, 168, 23, 0.12);
+    border-radius: 50%;
+}
+
+.Recommendations .RecommendationsEmptyTitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.Recommendations .RecommendationsEmptyText {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #8a8a8a;
+    margin-bottom: 10px;
+}
+
+.Recommendations .RecommendationsEmpty .MuiButton-root {
+    padding: 8px 26px;
+    background-color: #e6ab2e;
+    color: #fffdf6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.Recommendations .RecommendationsEmpty .MuiButton-root:hover {
+    background-color: #d1980f;
+}

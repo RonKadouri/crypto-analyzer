@@ -1,3 +1,48 @@
-.CoinDialogBox {
-	
+.CoinDialogBox .MuiDialog-paper {
+    border: 6px solid #fdf1dd;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(190, 150, 60, 0.25);
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.CoinDialogBox .DialogPrices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 24px 20px;
+}
+
+.CoinDialogBox .DialogPriceRow {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #6b4a3a;
+}
+
+.CoinDialogBox .DialogLoader {
+    display: flex;
+    justify-content: center;
+    padding: 44px;
+}
+
+.CoinDialogBox .MuiDialogActions-root {
+    padding: 4px 20px 22px;
+}
+
+.CoinDialogBox .CloseInfoButton {
+    background-color: #a5391f;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 12px 0;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.CoinDialogBox .CloseInfoButton:hover {
+    background-color: #8f2f18;
 }

@@ -1,0 +1,84 @@
+.MaxCoinsDialog .MuiDialog-paper {
+    border: 6px solid #fdf1dd;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(190, 150, 60, 0.25);
+    min-width: 320px;
+    overflow: hidden;
+}
+
+.MaxCoinsDialog .MuiDialogTitle-root {
+    text-align: center;
+    font-weight: 700;
+    color: #6b4a3a;
+}
+
+.MaxCoinsDialog .MaxCoinsHint {
+    text-align: center;
+    font-size: 13px;
+    color: #9b7b5a;
+    margin-bottom: 14px;
+}
+
+.MaxCoinsDialog .SelectedCoinsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.MaxCoinsDialog .SelectedCoinRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background-color: #fffdf6;
+    border: 1px solid #f0d9a3;
+    border-radius: 10px;
+}
+
+.MaxCoinsDialog .SelectedCoinRow .MuiAvatar-root {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border: 1px solid #f3e6c4;
+}
+
+.MaxCoinsDialog .SelectedCoinTitles {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.MaxCoinsDialog .SelectedCoinSymbol {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.MaxCoinsDialog .SelectedCoinName {
+    font-size: 12px;
+    color: #9b9b9b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.MaxCoinsDialog .SelectedCoinRow .MuiSwitch-root {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.MaxCoinsDialog .SelectedCoinRow .MuiSwitch-switchBase.Mui-checked {
+    color: #e6a817;
+}
+
+.MaxCoinsDialog .SelectedCoinRow .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+    background-color: #e6a817;
+    opacity: 0.55;
+}
+
+.MaxCoinsDialog .MaxCoinsCloseButton {
+    color: #a5391f;
+    font-weight: 700;
+    letter-spacing: 1px;
+}

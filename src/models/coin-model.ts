@@ -1,7 +1,7 @@
 export type CoinModel = {
     id: string;
-    name: string;
     symbol: string;
+    name: string;
     image: string;
     current_price: number;
 }
