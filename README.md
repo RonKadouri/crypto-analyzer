@@ -3,7 +3,7 @@
 A single-page React application for tracking cryptocurrency markets in real time.
 
 - **GitHub repository:** https://github.com/RonKadouri/crypto-analyzer
-- **Live site:** _coming soon — will be updated after deployment_
+- **Live site:** https://crypto-analyzer-ecru.vercel.app
 
 ## Pages
 
