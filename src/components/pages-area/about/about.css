@@ -1,3 +1,141 @@
 .About {
-	
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.About .AboutHeader {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0d9a3;
+}
+
+.About .AboutTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.About .AboutSubtitle {
+    font-size: 13px;
+    color: #9b7b5a;
+}
+
+.About .AboutCards {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.About .AboutCard {
+    padding: 28px;
+    background-color: #fffdf6;
+    border: 1px solid #f0d9a3;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(190, 150, 60, 0.12);
+}
+
+/* Personal details card. */
+.About .AboutProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 280px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.About .AboutPhoto {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0d9a3;
+    box-shadow: 0 2px 6px rgba(190, 150, 60, 0.25);
+}
+
+/* Shown until public/profile.jpg exists. */
+.About .AboutPhotoFallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6a817;
+    background-color: rgba(230, 168, 23, 0.12);
+}
+
+.About .AboutName {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.About .AboutRole {
+    font-size: 13px;
+    color: #9b7b5a;
+}
+
+.About .AboutEmail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #b57e10;
+    text-decoration: none;
+}
+
+.About .AboutEmail:hover {
+    text-decoration: underline;
+}
+
+/* Project description card. */
+.About .AboutProject {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.About .AboutProjectTitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.About .AboutText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #52514e;
+}
+
+.About .AboutTech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.About .AboutTechChip {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #b57e10;
+    background-color: rgba(230, 168, 23, 0.12);
+    border: 1px solid #f0d9a3;
+    border-radius: 999px;
+}
+
+/* Stack the cards on narrow screens. */
+@media (max-width: 800px) {
+    .About .AboutCards {
+        flex-direction: column;
+    }
+
+    .About .AboutProfile {
+        width: 100%;
+    }
 }

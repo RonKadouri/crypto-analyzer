@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# Cryptonite — Crypto Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page React application for tracking cryptocurrency markets in real time.
 
-Currently, two official plugins are available:
+- **GitHub repository:** https://github.com/RonKadouri/crypto-analyzer
+- **Live site:** _coming soon — will be updated after deployment_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
 
-## React Compiler
+- **Home** — the 100 most popular coins as cards (icon, symbol, name), with live
+  search by name or symbol, a **More Info** button showing the current price in
+  USD / EUR / ILS, and a **Switch** to mark up to five coins to follow
+  (persisted across browser sessions).
+- **Reports** — one live report for all marked coins: a single batched API call
+  per second returns all their USD prices at once and updates the chart.
+- **Recommendations** — for each marked coin, an AI advisor (ChatGPT) receives
+  the coin's current market data and answers whether it is worth buying, with an
+  explanation.
+- **About** — the project and the developer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech
 
-## Expanding the ESLint configuration
+React 19 · TypeScript · Redux Toolkit · React Router · Material UI · Chart.js · Axios · Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+APIs: [CoinGecko](https://www.coingecko.com/en/api) (coin list, details, market
+data) · [CryptoCompare](https://min-api.cryptocompare.com/) (live prices) ·
+[OpenAI](https://platform.openai.com/) (recommendations)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Running locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+API keys are **not** committed — copy `.env.example` to `.env` and fill in your keys:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cp .env.example .env
 ```
+
+```
+VITE_CRYPTOCOMPARE_API_KEY=<your key>   # https://developers.coindesk.com/
+VITE_OPENAI_API_KEY=<your key>          # https://platform.openai.com/api-keys
+```
+
+## Developer
+
+**Ron Kadouri** — Ron@xi-md.com

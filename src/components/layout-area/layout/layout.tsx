@@ -11,6 +11,12 @@ export function Layout() {
                 <Menu />
             </nav>
 
+            {/* Parallax hero — the background stays fixed while the page scrolls. */}
+            <header className="Hero">
+                <h1 className="HeroTitle">Cryptonite</h1>
+                <p className="HeroTagline">Real-time cryptocurrency market analyzer</p>
+            </header>
+
             <main>
                 <Router />
             </main>

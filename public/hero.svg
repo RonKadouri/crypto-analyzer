@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+    <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0f172a"/>
+            <stop offset="0.6" stop-color="#1e293b"/>
+            <stop offset="1" stop-color="#27354b"/>
+        </linearGradient>
+        <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e6a817" stop-opacity="0.35"/>
+            <stop offset="1" stop-color="#e6a817" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="1600" height="900" fill="url(#sky)"/>
+
+    <!-- Faint grid -->
+    <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+        <path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600"/>
+        <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+    </g>
+
+    <!-- Rising price line with glow fill -->
+    <path d="M0 700 L160 660 L300 690 L440 590 L580 620 L720 520 L860 560 L1000 440 L1140 480 L1280 360 L1440 400 L1600 280 V900 H0 Z"
+        fill="url(#glow)"/>
+    <path d="M0 700 L160 660 L300 690 L440 590 L580 620 L720 520 L860 560 L1000 440 L1140 480 L1280 360 L1440 400 L1600 280"
+        fill="none" stroke="#e6a817" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.85"/>
+
+    <!-- Candlesticks -->
+    <g stroke-width="2">
+        <g stroke="#1baf7a" fill="#1baf7a" opacity="0.5">
+            <path d="M250 560V680"/><rect x="238" y="590" width="24" height="60" rx="2"/>
+            <path d="M650 400V520"/><rect x="638" y="430" width="24" height="60" rx="2"/>
+            <path d="M1050 260V380"/><rect x="1038" y="290" width="24" height="60" rx="2"/>
+        </g>
+        <g stroke="#e05252" fill="#e05252" opacity="0.45">
+            <path d="M450 480V600"/><rect x="438" y="510" width="24" height="60" rx="2"/>
+            <path d="M850 330V450"/><rect x="838" y="360" width="24" height="60" rx="2"/>
+            <path d="M1250 200V320"/><rect x="1238" y="230" width="24" height="60" rx="2"/>
+        </g>
+    </g>
+
+    <!-- Floating coins -->
+    <g font-family="Georgia, serif" font-weight="bold" text-anchor="middle">
+        <g opacity="0.5">
+            <circle cx="1320" cy="170" r="58" fill="none" stroke="#e6a817" stroke-width="5"/>
+            <circle cx="1320" cy="170" r="44" fill="none" stroke="#e6a817" stroke-width="2" stroke-opacity="0.6"/>
+            <text x="1320" y="196" font-size="72" fill="#e6a817">&#8383;</text>
+        </g>
+        <g opacity="0.35">
+            <circle cx="210" cy="210" r="44" fill="none" stroke="#e6a817" stroke-width="4"/>
+            <circle cx="210" cy="210" r="33" fill="none" stroke="#e6a817" stroke-width="2" stroke-opacity="0.6"/>
+            <text x="210" y="230" font-size="54" fill="#e6a817">&#926;</text>
+        </g>
+        <g opacity="0.25">
+            <circle cx="620" cy="140" r="32" fill="none" stroke="#e6a817" stroke-width="3"/>
+            <text x="620" y="155" font-size="40" fill="#e6a817">&#436;</text>
+        </g>
+    </g>
+</svg>

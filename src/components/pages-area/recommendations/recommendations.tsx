@@ -5,7 +5,7 @@ import { Button, Typography } from "@mui/material";
 import "./recommendations.css";
 import { CoinModel } from "../../../models/coin-model";
 import { coinService } from "../../../services/coin-service";
-import { CoinsCard } from "../../coins-area/coins-card/coins-card";
+import { RecommendationCard } from "../../coins-area/recommendation-card/recommendation-card";
 import { AppState } from "../../../redux/app-state";
 import { maxSelectedCoins } from "../../../redux/selected-coins-slice";
 
@@ -61,7 +61,7 @@ export function Recommendations() {
                 </div>
             ) : (
                 <div className="RecommendationsList">
-                    {recommendedCoins.map(c => <CoinsCard key={c.id} coin={c} />)}
+                    {recommendedCoins.map(c => <RecommendationCard key={c.id} coin={c} />)}
                 </div>
             )}
 
